@@ -1,0 +1,9 @@
+---
+- name: install docker ce
+  hosts: thinkgos.cn
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  roles:
+    - role: "nickjj.docker"
+      tags: [ "docker" ]
